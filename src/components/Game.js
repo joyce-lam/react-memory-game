@@ -33,7 +33,43 @@ export default class Game extends React.Component {
 		})
 	}
 
-	
+	shuffle = () => {
+		let arr = this.state.characters;
+		let currentIndex = arr.length;
+		let tempValue;
+		let randomIndex;
+		while (0 !== currentIndex) {
+			randomIndex = Math.floor(Math.random()*currentIndex);
+			currentIndex = currentIndex -1;
+			tempValue = arr[currentIndex];
+			arr[currentIndex] = arr[randomIndex];
+			arr[randomIndex] = tempValue;
+		}
+		this.setState({characters: arr});
+	}
+
+	checkClick = id => {
+		const isClicked = this.state.characters.find(character => character.id === id )
+		this.shuffle();
+
+		if (isClicked.clicked) {
+			this.resetGame(lostMessage);
+
+		} else {
+			isClicked.clicked = true;
+			let newScore = this.state.score + 1;
+			this.setState({
+				score: newScore,
+				highestScore: Math.max(this.state.highestScore, newScore),
+				message: ""
+			});
+
+			if (this.state.score === this.state.characters.length) {
+				
+				this.resetGame(wonMessage);
+			}
+		}
+	}
 
 	render() {
 		return (
