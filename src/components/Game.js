@@ -10,15 +10,30 @@ const lostMessage = `You lost. Try again!`;
 const wonMessage = `You won! Play another round.`;
 
 export default class Game extends React.Component {
-	state = {
-		characters: characters,
-		score: 0,
-		highestScore: 0,
-		message: defaultMessage
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			characters: this.reset(characters),
+			score: 0,
+			highestScore: 0,
+			message: defaultMessage
+		};
+	}
+
+	reset = characters => {
+		return characters.map(character => Object.assign({}, character));
+	}
+
+	resetGame = gameMessage => {
+		let newCharacters = this.reset(characters);
+		this.setState({
+			score: 0,
+			characters: newCharacters,
+			message: gameMessage
+		})
+	}
 
 	
-
 
 	render() {
 		return (
