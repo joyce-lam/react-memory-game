@@ -1,0 +1,12 @@
+.navbar.navbar-default {
+	padding: 5px
+}
+
+.navbar-brand {
+	margin: 0px 10px 25px 20px
+}
+
+.navbar-nav li {
+  display: inline-block;
+  margin: 15px 20px 25px 20px
+}
