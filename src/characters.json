@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Pikachu",
+    "image": "./images/Pikachu.jpg",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "name": "Charmander",
+    "image": "./images/Charmander.png",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "name": "Jigglypuff",
+    "image": "./images/Jigglypuff.png",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "Meowth",
+    "image": "./images/Meowth.png",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "Bulbasaur",
+      "image": "./images/Bulbasaur.png",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "Poliwag",
+    "image": "./images/Poliwag.png",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "Psyduck",
+    "image": "./images/Psyduck.png",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "name": "Squirtle",
+    "image": "./images/Squirtle.png",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "name": "Vulpix",
+    "image": "./images/Vulpix.png",
+    "clicked": false
+  }
+]
